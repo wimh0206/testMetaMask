@@ -1,0 +1,21 @@
+{
+    "baseUrl": "https://dev.pancake.run",
+    "userAgent": "synpress",
+    "retries": { "runMode": 0, "openMode": 0 },
+    "integrationFolder": "src/specs",
+    "screenshotsFolder": "src/screenshots",
+    "videosFolder": "src/videos",
+    "chromeWebSecurity": true,
+    "viewportWidth": 1366,
+    "viewportHeight": 768,
+    "component": {
+        "componentFolder": ".",
+        "testFiles": "**/*spec.{js,jsx,ts,tsx}"
+    },
+    "env": {
+        "coverage": false
+    },
+    "defaultCommandTimeout": 30000,
+    "pageLoadTimeout": 60000,
+    "requestTimeout": 30000
+}
