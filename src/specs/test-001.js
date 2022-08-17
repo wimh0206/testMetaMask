@@ -1,7 +1,6 @@
 describe('Metamask', () => {
-      it('test metamask', () => {
+      it(`test metamask`, () => {
         cy.visit('https://www.google.com')
         cy.log("nhutest")
-        //cy.get('#connectButton').click();
       })
     })
