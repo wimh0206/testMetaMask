@@ -1,5 +1,5 @@
 // ***********************************************************
-// This example support/index.js is processed and
+// This example support/e2e.ts is processed and
 // loaded automatically before your test files.
 //
 // This is a great place to put global configuration and
@@ -15,6 +15,19 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import "@synthetixio/synpress/support";
+import "@synthetixio/synpress/support/index"
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+declare global {
+    namespace Cypress {
+      interface Chainable {
+        /**
+         * Custom command to select DOM element by data-cy attribute.
+         * @example cy.dataCy('greeting')
+         */
+         changeNetwork(networkName: string, networkType?: string, chainId?: number, route?: string): Chainable<void>
+         connectWallet(): Chainable<void>
+      }
+    }
+  }

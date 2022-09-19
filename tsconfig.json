@@ -1,9 +1,13 @@
 {
     "compilerOptions": {
+        "target": "ES6",
         "allowJs": true,
         "baseUrl": "../../node_modules",
-        "types": ["cypress", "@types/puppeteer-core", "@synthetixio/synpress/support", "cypress-wait-until", "@testing-library/cypress"],
-        "outDir": "./output"
+        "types": ["cypress", "@synthetixio/synpress/support", "cypress-wait-until", "@testing-library/cypress", "node"],
+        "outDir": "./output",
+        "typeRoots": [ "../node_modules/@types" ]
     },
-    "include": ["**/*.*"]
+    "include": ["**/*.ts", "src/support/commands.js"]
 }
+    
+
