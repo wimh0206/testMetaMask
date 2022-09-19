@@ -24,7 +24,7 @@ describe ('Testing Metamask Swap',function() {
 	})
 
 	using (testData1[Cypress.env().networkType], function(data, description) {
-		it.only(`Swap Feature - ${description}`, function(){
+		it(`Swap Feature - ${description}`, function(){
 			cy.get('@elementFactory').then(function (ele) {
 				const swapPage = new SwapPage(ele)
 				swapPage.go()
@@ -48,9 +48,6 @@ describe ('Testing Metamask Swap',function() {
 			cy.get('@elementFactory').then(function (ele) {
 				const swapPage = new SwapPage(ele)
 				swapPage.go()
-       // swapPage.switchNetworkByUrl(data.chainID,data.networkName)
-        //swapPage.changeSettings('10')
-        //swapPage.swapToken(data.swapIn, data.swapOut, data.fromToken, data.toToken)
 			})
 		})
 	})

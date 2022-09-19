@@ -20,3 +20,8 @@ bin-release/
 node_modules/
 .DS_Store
 dist/
+
+cypress/
+envs/
+package-lock.json
+src/screenshots/
